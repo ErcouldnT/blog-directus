@@ -37,6 +37,7 @@
 		"vite": "^6.2.6"
 	},
 	"dependencies": {
+		"@directus/sdk": "^19.1.0",
 		"daisyui": "^5.0.43"
 	}
 }
