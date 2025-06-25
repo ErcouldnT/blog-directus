@@ -4,11 +4,12 @@
 
 	export let data;
 
-	const { global } = data;
+	const { project } = data;
 </script>
 
 <svelte:head>
-	<title>{global.title}</title>
+	<title>{project.title}</title>
+	<meta name="description" content={project.description} />
 </svelte:head>
 
 <main
