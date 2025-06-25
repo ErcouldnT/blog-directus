@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import Navbar from '$lib/components/Navbar.svelte';
 
 	export let data;
 
@@ -13,5 +14,6 @@
 <main
 	class="bg-base-300 text-base-content m-8 mx-auto flex min-h-screen max-w-5xl flex-col rounded-lg p-8 shadow sm:shadow-lg lg:shadow-xl"
 >
+	<Navbar />
 	<slot />
 </main>
