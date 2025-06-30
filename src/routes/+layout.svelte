@@ -13,7 +13,7 @@
 </svelte:head>
 
 <main class="">
-	<Navbar />
+	<!-- <Navbar /> -->
 	<div
 		class="bg-base-300 text-base-content m-4 mx-auto flex min-h-screen max-w-5xl flex-col rounded-lg p-8 shadow sm:shadow-lg lg:shadow-xl"
 	>

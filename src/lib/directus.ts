@@ -5,6 +5,7 @@ import { createDirectus, rest } from '@directus/sdk';
 
 function getDirectusInstance(fetch?: LoadEvent['fetch']) {
 	const options = fetch ? { globals: { fetch } } : {};
+	// todo: types
 	const directus = createDirectus(PUBLIC_API_URL, options).with(rest());
 	return directus;
 }
