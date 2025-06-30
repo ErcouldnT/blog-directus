@@ -17,8 +17,6 @@ export async function load({ fetch, params }) {
 		)) as Post[];
 
 		const post = posts[0];
-		console.log(post);
-
 		// if (!post) throw new Error('Not found');
 
 		return { post };
