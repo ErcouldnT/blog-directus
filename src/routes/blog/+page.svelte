@@ -15,7 +15,11 @@
 						{post.title}
 					</a>
 				</h2>
-				<span>{post.publish_date} &bull; {post.author.name}</span>
+				<span
+					>{new Date(post.date_created).toLocaleDateString('tr')} &bull; {post.author.first_name +
+						' ' +
+						post.author.last_name}</span
+				>
 			</li>
 		{/each}
 	</ul>

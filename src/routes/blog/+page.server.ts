@@ -7,8 +7,11 @@ export async function load({ fetch }) {
 
 	const posts = (await directus.request(
 		readItems('posts', {
-			fields: ['slug', 'title', 'publish_date', { author: ['name'] }],
-			sort: ['-publish_date']
+			fields: ['slug', 'title', 'date_created', { author: ['first_name', 'last_name'] }],
+			sort: ['-date_created'],
+			filter: {
+				status: { _eq: 'published' }
+			}
 		})
 	)) as Post[];
 

@@ -9,7 +9,8 @@ export interface Page {
 }
 
 export interface Author {
-	name: string;
+	first_name: string;
+	last_name: string;
 }
 
 export interface Image {
@@ -21,7 +22,7 @@ export interface Post {
 	slug: string;
 	title: string;
 	content: string;
-	publish_date: Date;
+	date_created: Date;
 	author: Author;
-	image: Image;
+	image?: Image;
 }
