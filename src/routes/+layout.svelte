@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import SEO from '$lib/components/SEO.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 
 	export let data;
@@ -7,10 +8,7 @@
 	const { project } = data;
 </script>
 
-<svelte:head>
-	<title>{project.title}</title>
-	<meta name="description" content={project.description} />
-</svelte:head>
+<SEO title={project.title} description={project.description} />
 
 <main class="">
 	<!-- <Navbar /> -->
