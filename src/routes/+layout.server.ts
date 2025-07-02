@@ -2,7 +2,7 @@ import type { Project, Post } from '$lib/directus-types.js';
 import { readItems } from '@directus/sdk';
 import getDirectusInstance from '$lib/directus';
 
-export async function load({ fetch }) {
+export async function load({ fetch, locals }) {
 	const directus = getDirectusInstance(fetch);
 
 	// @ts-expect-error: Directus Singleton types are not fully compatible with TypeScript
@@ -20,6 +20,7 @@ export async function load({ fetch }) {
 
 	return {
 		project,
-		posts
+		posts,
+		directusUrl: String(locals.directus.url)
 	};
 }

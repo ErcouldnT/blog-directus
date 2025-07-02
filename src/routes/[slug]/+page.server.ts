@@ -1,14 +1,12 @@
 import type { Post } from '$lib/directus-types';
 import { error } from '@sveltejs/kit';
 import { readItems } from '@directus/sdk';
-import getDirectusInstance from '$lib/directus';
 
-export async function load({ fetch, params }) {
+export async function load({ params, locals }) {
 	const { slug } = params;
-	const directus = getDirectusInstance(fetch);
 
 	try {
-		const posts = (await directus.request(
+		const posts = (await locals.directus.request(
 			readItems('posts', {
 				filter: { slug: { _eq: slug } },
 				fields: ['*', { '*': ['*'] }],

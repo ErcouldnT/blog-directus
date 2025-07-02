@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { PUBLIC_API_URL } from '$env/static/public';
 	import SEO from '$lib/components/SEO.svelte';
 
 	export let data;
 
-	const { post } = data;
+	const { post, directusUrl } = data;
 </script>
 
 <SEO title={post.title} description={post.content.slice(0, 160)} />
@@ -16,7 +15,7 @@
 
 	{#if post.image}
 		<img
-			src="{PUBLIC_API_URL}/assets/{post.image.filename_disk}?width=600"
+			src="{directusUrl}assets/{post.image.filename_disk}?width=1024"
 			alt={post.image.description}
 		/>
 	{/if}
