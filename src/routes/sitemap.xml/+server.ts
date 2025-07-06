@@ -1,13 +1,14 @@
-import type { Post } from '$lib/directus-types.js';
 import { readItems } from '@directus/sdk';
 import getDirectusInstance from '$lib/directus';
+
+export const prerender = true;
 
 const directus = getDirectusInstance(fetch);
 
 export async function GET() {
 	const site = 'https://blog.erkut.dev';
 
-	const pages = (await directus.request(
+	const pages = await directus.request(
 		readItems('posts', {
 			fields: ['slug'],
 			sort: ['-date_created'],
@@ -15,7 +16,7 @@ export async function GET() {
 				status: { _eq: 'published' }
 			}
 		})
-	)) as Post[];
+	);
 
 	const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

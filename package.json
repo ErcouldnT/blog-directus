@@ -10,7 +10,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint ."
+		"lint": "prettier --check . && eslint .",
+		"types": "export $(cat .env | grep -v '^#' | xargs) && directus-typeforge --host $PUBLIC_DIRECTUS_URL --token $DIRECTUS_TOKEN --outFile src/lib/directus-types.ts"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -21,6 +22,7 @@
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@tailwindcss/typography": "^0.5.15",
 		"@tailwindcss/vite": "^4.1.10",
+		"directus-typeforge": "^0.16.3",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",

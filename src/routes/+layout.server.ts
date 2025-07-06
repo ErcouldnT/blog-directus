@@ -1,14 +1,10 @@
-import type { Project, Post } from '$lib/directus-types.js';
-import { readItems } from '@directus/sdk';
-import getDirectusInstance from '$lib/directus';
+import { readSingleton, readItems } from '@directus/sdk';
+import { directusUrl } from '$lib/directus';
 
-export async function load({ fetch, locals }) {
-	const directus = getDirectusInstance(fetch);
+export async function load({ locals }) {
+	const project = await locals.directus.request(readSingleton('project'));
 
-	// @ts-expect-error: Directus Singleton types are not fully compatible with TypeScript
-	const project = (await directus.request(readItems('global'))) as Project;
-
-	const posts = (await directus.request(
+	const posts = await locals.directus.request(
 		readItems('posts', {
 			fields: ['slug', 'title', 'date_created', { author: ['first_name', 'last_name'] }],
 			sort: ['-date_created'],
@@ -16,11 +12,11 @@ export async function load({ fetch, locals }) {
 				status: { _eq: 'published' }
 			}
 		})
-	)) as Post[];
+	);
 
 	return {
 		project,
 		posts,
-		directusUrl: String(locals.directus.url)
+		directusUrl
 	};
 }

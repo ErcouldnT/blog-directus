@@ -15,8 +15,11 @@
 
 	{#if post.image}
 		<img
-			src="{directusUrl}assets/{post.image.filename_disk}?width=1024"
-			alt={post.image.description}
+			src={directusUrl +
+				'/assets/' +
+				(typeof post.image === 'string' ? post.image : post.image.filename_disk) +
+				'?width=1024'}
+			alt={typeof post.image === 'string' ? post.title : post.image.description}
 		/>
 	{/if}
 

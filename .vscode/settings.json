@@ -1,5 +1,5 @@
 {
-	"cSpell.words": ["daisyui", "directus"],
+	"cSpell.words": ["daisyui", "directus", "typeforge"],
 	"github.copilot.chat.codeGeneration.instructions": [
 		{
 			"file": "./.vscode/daisyui.md"
