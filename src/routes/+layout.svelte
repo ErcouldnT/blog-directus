@@ -1,7 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import SEO from '$lib/components/SEO.svelte';
-	import Navbar from '$lib/components/Navbar.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	export let data;
 
@@ -10,11 +11,10 @@
 
 <SEO title={project.title} description={project.description} />
 
-<main class="">
-	<!-- <Navbar /> -->
-	<div
-		class="bg-base-300 text-base-content m-4 mx-auto flex min-h-screen max-w-5xl flex-col rounded-lg p-8 shadow sm:shadow-lg lg:shadow-xl"
-	>
+<main class="mx-auto flex min-h-screen max-w-5xl flex-col space-y-4">
+	<Header title={project.title} />
+	<div class="mt-32">
 		<slot />
 	</div>
+	<Footer />
 </main>

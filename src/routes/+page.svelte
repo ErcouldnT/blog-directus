@@ -5,8 +5,6 @@
 </script>
 
 <main class="prose prose-base">
-	<h1>{project.title}</h1>
-
 	<ul>
 		{#each posts as post (post.slug)}
 			<li>
