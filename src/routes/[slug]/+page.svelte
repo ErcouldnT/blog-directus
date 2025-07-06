@@ -9,7 +9,7 @@
 <SEO title={post.title} description={post.content.slice(0, 160)} />
 
 <main
-	class="prose lg:prose-xl prose-img:rounded-lg prose-neutral prose-headings:font-serif prose-p:text-gray-300 prose-a:text-emerald-600 hover:prose-a:text-emerald-800 prose-li:text-gray-700 prose-ul:list-inside prose-ol:list-inside prose-li:marker:text-emerald-600 prose-img:w-full prose-img:p-0 mx-auto"
+	class="prose lg:prose-2xl prose-img:rounded-lg prose-img:w-full prose-img:shadow-2xl prose-img:p-0 mx-auto"
 >
 	<h1>{post.title}</h1>
 

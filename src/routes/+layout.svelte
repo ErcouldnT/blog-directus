@@ -11,7 +11,7 @@
 
 <SEO title={project.title} description={project.description} />
 
-<main class="mx-auto flex min-h-screen max-w-5xl flex-col space-y-4">
+<main class="mx-auto flex min-h-screen max-w-5xl flex-col space-y-4 p-2">
 	<Header title={project.title} />
 	<div class="mt-32">
 		<slot />
