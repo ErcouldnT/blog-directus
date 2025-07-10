@@ -11,10 +11,14 @@
 
 <SEO title={project.title} description={project.description} />
 
-<main class="mx-auto flex min-h-screen max-w-5xl flex-col space-y-4 p-2">
-	<Header title={project.title} />
-	<div class="mt-32">
+<main class="m-2 mx-auto flex min-h-screen max-w-5xl flex-col space-y-4 px-2">
+	<section class="flex justify-center">
+		<Header title={project.title} />
+	</section>
+	<section class="mt-32">
 		<slot />
-	</div>
-	<Footer />
+	</section>
+	<section>
+		<!-- <Footer /> -->
+	</section>
 </main>
