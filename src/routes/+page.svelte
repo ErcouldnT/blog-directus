@@ -1,8 +1,12 @@
 <script lang="ts">
+	import SEO from '$lib/components/SEO.svelte';
+
 	export let data;
 
 	const { posts, project } = data;
 </script>
+
+<SEO title={project.title} description={project.description} />
 
 <main class="prose prose-base">
 	<ul>
