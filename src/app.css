@@ -1,13 +1,27 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
-@plugin 'daisyui';
+@plugin "daisyui" {
+	themes:
+		light --default,
+		dark --prefersdark;
+}
+@plugin "daisyui/theme" {
+	name: 'dark';
+	--background-color: #a71d31;
+}
 
 @layer base {
 	html,
 	body {
 		height: 100%;
 		margin: 0;
-		background-image: linear-gradient(to bottom right, #a71d31, #3f0d12);
+		background-image: linear-gradient(to bottom right, var(--background-color), #3f0d12);
 		background-attachment: fixed;
 	}
+}
+
+html {
+	transition:
+		background-color 0.3s,
+		color 0.3s;
 }

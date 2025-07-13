@@ -40,6 +40,7 @@
 	"dependencies": {
 		"@directus/sdk": "^19.1.0",
 		"@lucide/svelte": "^0.525.0",
-		"daisyui": "^5.0.43"
+		"daisyui": "^5.0.43",
+		"svelte-persisted-store": "^0.12.0"
 	}
 }
