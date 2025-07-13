@@ -6,7 +6,7 @@
 	const { post, directusUrl } = data;
 </script>
 
-<SEO title={post.title} description={post.content.slice(0, 160)} />
+<SEO title={post.title} description={post.description} />
 
 <main
 	class="prose lg:prose-2xl prose-img:rounded-lg prose-img:w-full prose-img:shadow-2xl prose-img:p-0 mx-auto"

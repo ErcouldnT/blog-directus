@@ -4,13 +4,13 @@
 
 	export let title: string;
 	export let description: string;
-
-	const image = `https://social-share-images.vercel.app/${encodeURIComponent(title)}.png`;
+	export let image = `https://social-share-images.vercel.app/${encodeURIComponent(title)}.png`;
 
 	const loadSeo = () => {
 		seo.set({
 			title,
-			description
+			description,
+			image
 		});
 	};
 
