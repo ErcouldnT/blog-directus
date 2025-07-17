@@ -8,6 +8,7 @@
 	const { post, directusUrl } = data;
 
 	const comments = post.comments as Comment[];
+	const postId = post.id;
 </script>
 
 <SEO title={post.title} description={post.description} />
@@ -29,5 +30,5 @@
 
 	<div>{@html post.content}</div>
 
-	<Comments {comments} />
+	<Comments {comments} {postId} />
 </main>
