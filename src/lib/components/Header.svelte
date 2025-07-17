@@ -13,10 +13,6 @@
 	});
 
 	let { title } = $props();
-
-	// $effect(() => {
-	// 	console.log(fixed);
-	// });
 </script>
 
 <svelte:window bind:scrollY />
