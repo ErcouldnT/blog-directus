@@ -1,5 +1,4 @@
 <script lang="ts">
-	// import { Moon, Search, Settings2, Sun } from '@lucide/svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
 
 	let scrollY = $state(0);
@@ -27,17 +26,7 @@
 			<p>{title}</p>
 		</a>
 
-		<!-- <button class="flex cursor-pointer items-center space-x-2">
-			<Search />
-			<p>Search</p>
-		</button> -->
-
 		<section class="flex items-center space-x-2">
-			<!-- <button class="flex cursor-pointer items-center space-x-2">
-				<Settings2 />
-				<p>Options</p>
-			</button> -->
-
 			<!-- <div class="divider divider-horizontal"></div> -->
 
 			<ThemeToggle />

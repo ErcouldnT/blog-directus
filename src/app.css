@@ -17,6 +17,10 @@
 		margin: 0;
 		background-image: linear-gradient(to bottom right, var(--background-color), #3f0d12);
 		background-attachment: fixed;
+		scroll-behavior: smooth;
+	}
+	::-webkit-scrollbar {
+		display: none;
 	}
 }
 
@@ -24,4 +28,5 @@ html {
 	transition:
 		background-color 0.3s,
 		color 0.3s;
+	scrollbar-width: none;
 }
