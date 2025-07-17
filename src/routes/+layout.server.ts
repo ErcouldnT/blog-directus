@@ -6,7 +6,13 @@ export async function load({ locals }) {
 
 	const posts = await locals.directus.request(
 		readItems('posts', {
-			fields: ['slug', 'title', 'date_created', { author: ['first_name', 'last_name'] }],
+			fields: [
+				'slug',
+				'title',
+				'date_created',
+				'description',
+				{ author: ['first_name', 'last_name'] }
+			],
 			sort: ['-date_created'],
 			filter: {
 				status: { _eq: 'published' }

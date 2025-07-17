@@ -12,9 +12,9 @@
 	</nav>
 	<nav>
 		<div class="grid grid-flow-col gap-4">
-			<a href="https://youtube.com/@ErcouldnT" target="_blank">
+			<!-- <a href="https://youtube.com/@ErcouldnT" target="_blank">
 				<Youtube strokeWidth="1.5" />
-			</a>
+			</a> -->
 			<a href="https://instagram.com/ErcouldnT" target="_blank">
 				<Instagram strokeWidth="1.5" />
 			</a>
@@ -25,6 +25,9 @@
 	</nav>
 	<aside>
 		<p>© {new Date().getFullYear()}</p>
-		<p>Coded with ♥️ <span class="underline underline-offset-4">in Moscow</span></p>
+		<p>
+			Coded with <span class="text-lg">♥️</span>
+			<span class="underline underline-offset-4">in Moscow</span>
+		</p>
 	</aside>
 </footer>

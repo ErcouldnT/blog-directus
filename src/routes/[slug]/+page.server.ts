@@ -12,6 +12,6 @@ export async function load({ params, locals }) {
 		})
 	);
 
-	if (!post) error(404, 'Post not found.');
+	if (!post) throw error(404, 'Post not found.');
 	return { post };
 }
