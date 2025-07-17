@@ -1,0 +1,1 @@
+// zod ile .env check

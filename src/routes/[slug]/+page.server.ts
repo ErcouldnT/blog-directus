@@ -1,10 +1,10 @@
 import { error } from '@sveltejs/kit';
 import { readItems } from '@directus/sdk';
 
-export async function load({ params, locals }) {
+export async function load({ params, locals: { directus } }) {
 	const { slug } = params;
 
-	const [post] = await locals.directus.request(
+	const [post] = await directus.request(
 		readItems('posts', {
 			filter: { slug: { _eq: slug } },
 			fields: ['*'],
