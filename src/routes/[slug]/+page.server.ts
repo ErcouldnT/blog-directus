@@ -5,7 +5,7 @@ export async function load({ params: { slug }, locals: { directus } }) {
 	const [post] = await directus.request(
 		readItems('posts', {
 			filter: { slug: { _eq: slug } },
-			fields: ['*'],
+			fields: ['*', { comments: ['*'] }],
 			limit: 1
 		})
 	);

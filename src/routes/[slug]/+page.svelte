@@ -1,9 +1,13 @@
 <script lang="ts">
+	import type { Comment } from '$lib/directus-types.js';
+	import Comments from '$lib/components/Comments.svelte';
 	import SEO from '$lib/components/SEO.svelte';
 
 	export let data;
 
 	const { post, directusUrl } = data;
+
+	const comments = post.comments as Comment[];
 </script>
 
 <SEO title={post.title} description={post.description} />
@@ -24,4 +28,6 @@
 	{/if}
 
 	<div>{@html post.content}</div>
+
+	<Comments {comments} />
 </main>

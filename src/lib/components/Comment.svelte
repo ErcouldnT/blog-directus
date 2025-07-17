@@ -1,5 +1,10 @@
 <script lang="ts">
-	import Loading from '$lib/components/Loading.svelte';
+	import type { Comment } from '$lib/directus-types';
+
+	export let comment: Comment;
 </script>
 
-<Loading />
+<div>
+	<h4>{comment.username}</h4>
+	<p>{comment.comment}</p>
+</div>
